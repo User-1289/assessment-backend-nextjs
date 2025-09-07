@@ -35,25 +35,25 @@ const NavHeader: React.FC = () => {
   };
 
   return (
-    <Box className="h-16 bg-white border-b border-gray-200 px-4 md:px-6 flex items-center justify-between">
-      {/* Left side - Dashboard title (hidden on mobile) */}
+    <Box className="h-16 bg-white border-b border-gray-200 px-6 flex items-center justify-between">
+      {/* Left side - Dashboard title */}
       <Typography
         variant="h4"
-        className="hidden md:block text-gray-900 font-bold ml-5"
+        className="text-gray-900 font-bold ml-16 md:ml-5 "
       >
         Dashboard
       </Typography>
 
       {/* Right side - Search, Language, Notifications, Profile */}
-      <div className="flex items-center gap-2 md:gap-4 w-full md:w-auto justify-between md:justify-end">
-        {/* Search bar - responsive width */}
+      <div className="flex items-center gap-4">
+        {/* Search bar */}
         <TextField
           placeholder="Search here..."
           variant="outlined"
           size="small"
+          className="hidden sm:block"
           sx={{
-            width: { xs: "100%", sm: 250, md: 300 },
-            maxWidth: { xs: 250 },
+            width: 300,
             "& .MuiOutlinedInput-root": {
               borderRadius: "12px",
               backgroundColor: "#F8F9FA",
@@ -72,7 +72,7 @@ const NavHeader: React.FC = () => {
           }}
         />
 
-        {/* Language selector (hidden on mobile) */}
+        {/* Language selector */}
         <Button
           onClick={handleLangClick}
           className="hidden md:flex items-center gap-2 text-gray-700 hover:bg-gray-100 rounded-lg px-3 py-2"
@@ -99,9 +99,8 @@ const NavHeader: React.FC = () => {
           <MenuItem onClick={handleClose}>🇫🇷 French</MenuItem>
         </Menu>
 
-        {/* Notifications (hidden on mobile) */}
+        {/* Notifications */}
         <IconButton
-          className="hidden md:flex"
           sx={{
             backgroundColor: "#F8F9FA",
             "&:hover": { backgroundColor: "#E5E7EB" },
@@ -112,30 +111,24 @@ const NavHeader: React.FC = () => {
           </Badge>
         </IconButton>
 
-        {/* Profile - simplified on mobile */}
+        {/* Profile */}
         <Button
           onClick={handleProfileClick}
-          className="flex items-center gap-2 md:gap-3 hover:bg-gray-100 rounded-lg p-1 md:p-2"
+          className="flex items-center gap-3 hover:bg-gray-100 rounded-lg p-2"
           sx={{
             textTransform: "none",
             "&:hover": { backgroundColor: "#F3F4F6" },
-            minWidth: "auto",
           }}
         >
           <Avatar
             src="/api/placeholder/40/40"
-            sx={{ width: { xs: 32, md: 40 }, height: { xs: 32, md: 40 } }}
+            sx={{ width: 40, height: 40 }}
           />
           <div className="hidden md:block text-left">
             <div className="font-semibold text-gray-900">Musfiq</div>
             <div className="text-sm text-gray-500">Admin</div>
           </div>
-          <KeyboardArrowDownIcon
-            sx={{
-              color: "#6B7280",
-              display: { xs: "none", sm: "block" },
-            }}
-          />
+          <KeyboardArrowDownIcon sx={{ color: "#6B7280" }} />
         </Button>
 
         <Menu
