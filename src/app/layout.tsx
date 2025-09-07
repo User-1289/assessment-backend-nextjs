@@ -35,13 +35,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={roboto.variable} suppressHydrationWarning>
-      <body
-        
-      >
+      <body>
         <AppRouterCacheProvider options={{enableCssLayer: true}}>
-          <AppSidebar />
-          {children}
-          </AppRouterCacheProvider>
+          <div className="flex">
+            <div className="fixed left-0 top-0 h-screen w-72 overflow-auto">
+              <AppSidebar />
+            </div>
+            <div className="ml-64 flex-1">
+              {children}
+            </div>
+          </div>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
