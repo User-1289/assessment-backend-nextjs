@@ -3,6 +3,7 @@ import NavHeader from "@/components/NavHeader";
 import AppSidebar from "@/components/AppSidebar";
 import DashboardMetrics from "@/components/DashboardMetrics";
 import CustSatisfaction from "@/components/CustSatisfaction";
+import DashboardRevenue from "@/components/DashboardRevenue";
 
 export default function Home() {
   return (
@@ -14,9 +15,10 @@ export default function Home() {
         <NavHeader />
         <div className="flex-1 p-6 bg-gray-50 flex justify-start items-start">
           {/* Flex container for metrics and satisfaction */}
-          <div className="flex flex-wrap space-x-6 space-y-6">
+          <div className="flex flex-wrap space-x-3 space-y-6">
             <DashboardMetrics />
             <CustSatisfaction />
+            <DashboardRevenue />
           </div>
         </div>
       </main>

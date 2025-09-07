@@ -91,7 +91,7 @@ export default function DashboardMetrics() {
   ]
 
   return (
-    <Box className="border rounded-lg bg-white shadow-sm w-fit min-w-1xl">
+    <Box className="border rounded-lg bg-white shadow-sm w-fit ">
       {/* Header */}
       <Box className="flex justify-between items-start mb-6 p-6 pb-0 min-w-fit">
         <Box>
