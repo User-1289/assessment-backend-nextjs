@@ -109,7 +109,7 @@ const AppSidebar: React.FC = () => {
         </nav>
       </div>
       {/* Pro Card */}
-      <div className="mt-8">
+      <div className="mt-8 p-5">
         <div className="bg-[#635BFF] rounded-2xl p-6 flex flex-col items-center text-white">
           <Avatar sx={{ bgcolor: "#fff", color: "#635BFF", mb: 2 }}>
             <LinkIcon />
@@ -128,6 +128,7 @@ const AppSidebar: React.FC = () => {
               borderRadius: "12px",
               px: 3,
               py: 1,
+              
               boxShadow: 0,
               "&:hover": { bgcolor: "#F3F4F6" },
             }}

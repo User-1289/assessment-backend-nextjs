@@ -4,7 +4,7 @@ import AppSidebar from "@/components/AppSidebar";
 import DashboardMetrics from "@/components/DashboardMetrics";
 import CustSatisfaction from "@/components/CustSatisfaction";
 import DashboardRevenue from "@/components/DashboardRevenue";
-
+import TopProducts from "@/components/TopProducts";
 export default function Home() {
   return (
     <div className="flex h-screen">
@@ -19,6 +19,7 @@ export default function Home() {
             <DashboardMetrics />
             <CustSatisfaction />
             <DashboardRevenue />
+            <TopProducts />
           </div>
         </div>
       </main>
